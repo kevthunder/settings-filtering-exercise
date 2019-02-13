@@ -1,5 +1,12 @@
 # Settings filtering API
 
+## Local Devloppement using Docker
+
+1. Make sure you have [docker](https://www.docker.com/) instaled
+2. Clone the project locally
+3. Enter the folowing command line inside the project folder `docker-compose up`
+4. You should see "Hello, world!" at the end
+
 ## Description
 
 Imagine you are building a web page to remote control settings on a Jukebox.
@@ -46,7 +53,6 @@ Bonus Question
 2. Create a REST API with your filtering function using ExpressJS
 
 ## todo 
-- Create dockerfile
 - Install needed npm package (eslint, mocha, Express, ect.)
 - Create fake apis calls module
 - Create filtering module

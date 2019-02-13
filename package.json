@@ -1,0 +1,16 @@
+{
+  "name": "settings-filtering-api",
+  "version": "1.0.0",
+  "description": "web page to remote control settings on a device",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo \"Hello, world!\" && exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kevthunder/settings-filtering-exercise.git"
+  },
+  "author": "Kevin Giguere Lacasse",
+  "license": "ISC"
+}
