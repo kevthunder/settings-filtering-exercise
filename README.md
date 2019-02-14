@@ -10,7 +10,13 @@
 ### Running tests
 
 ```
-docker-compose run --rm web npm test
+docker-compose exec web npm test
+```
+
+### Autoformatting your code (linting)
+
+```
+docker-compose exec web npm run lint-fix
 ```
 
 ## Description
@@ -59,6 +65,5 @@ Bonus Question
 2. Create a REST API with your filtering function using ExpressJS
 
 ## todo
-- Create fake apis calls module
 - Create filtering module
 - Create Express End point
