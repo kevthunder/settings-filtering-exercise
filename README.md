@@ -1,11 +1,17 @@
 # Settings filtering API
 
-## Local Devloppement using Docker
+## Local Development using Docker
 
 1. Make sure you have [docker](https://www.docker.com/) instaled
 2. Clone the project locally
-3. Enter the folowing command line inside the project folder `docker-compose up`
-4. You should see "Hello, world!" at the end
+3. Enter the folowing command line inside the project folder `docker-compose up -d`
+4. In your browser enter `http://localhost:3301/`, you should see "Hello, world!"
+
+### Running tests
+
+```
+docker-compose run --rm web npm test
+```
 
 ## Description
 
@@ -52,8 +58,7 @@ Bonus Question
 1. Include a dockerfile to build and run your application in Docker
 2. Create a REST API with your filtering function using ExpressJS
 
-## todo 
-- Install needed npm package (eslint, mocha, Express, ect.)
+## todo
 - Create fake apis calls module
 - Create filtering module
 - Create Express End point

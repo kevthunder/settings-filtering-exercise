@@ -4,13 +4,28 @@
   "description": "web page to remote control settings on a device",
   "main": "index.js",
   "scripts": {
-    "dev": "echo \"Hello, world!\" && exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "eslint src/** tests/** ./*.js && mocha",
+    "lint-fix": "eslint src/** tests/** ./*.js --fix"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:kevthunder/settings-filtering-exercise.git"
   },
   "author": "Kevin Giguere Lacasse",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
