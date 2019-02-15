@@ -65,5 +65,4 @@ Bonus Question
 2. Create a REST API with your filtering function using ExpressJS
 
 ## todo
-- Create filtering module
 - Create Express End point
