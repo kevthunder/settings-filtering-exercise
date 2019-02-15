@@ -18,6 +18,10 @@ docker-compose exec web npm test
 ```
 docker-compose exec web npm run lint-fix
 ```
+## routes
+
+### GET /filtered_settings/
+Get settings available for the current components
 
 ## Description
 
@@ -63,6 +67,3 @@ NB: You do not have to write functions to call the APIs. Assume you already have
 Bonus Question
 1. Include a dockerfile to build and run your application in Docker
 2. Create a REST API with your filtering function using ExpressJS
-
-## todo
-- Create Express End point

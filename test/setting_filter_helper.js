@@ -160,7 +160,7 @@ describe('Setting Filter Helper', function () {
     assert.deepEqual(filteringHelper.filterSettingsByComponents(settings, components), expect)
   })
 
-  it('neturn en empty array when there is no settings', function () {
+  it('return en empty array when there is no settings', function () {
     const settings = []
     const components = [
       {
