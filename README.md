@@ -2,10 +2,10 @@
 
 ## Local Development using Docker
 
-1. Make sure you have [docker](https://www.docker.com/) instaled
+1. Make sure you have [docker](https://www.docker.com/) installed
 2. Clone the project locally
 3. Enter the folowing command line inside the project folder `docker-compose up -d`
-4. In your browser enter `http://localhost:3301/`, you should see "Hello, world!"
+4. In your browser enter `http://localhost:3301/`, you should see a json with the name of the application
 
 ### Running tests
 
