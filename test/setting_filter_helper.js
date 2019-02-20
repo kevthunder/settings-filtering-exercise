@@ -60,6 +60,45 @@ describe('Setting Filter Helper', function () {
     assert.isTrue(filteringHelper.settingIsSatisfiedByComponents(setting, components))
   })
 
+  /**
+   * This is where I tried to determine wich implementation of settingIsSatisfiedByComponents was better.
+   * By moving where bigArray was around requires and components, each implementation would sometime be faster or slower
+   **/
+  this.slow(10000)
+  it.skip('is fast', function () {
+    const bigArray = Array.apply(null, { length: 1000 }).map(Number.call, Number)
+    const setting = {
+      'name': 'foo',
+      'requires': [].concat([
+        'foo', 'bar'
+      ])
+    }
+    const components = [].concat(bigArray, [
+      'foo', 'bar'
+    ]).map((name) => {
+      return { 'name': name }
+    })
+    let i
+
+    console.time('settingIsSatisfiedByComponents')
+    for (i = 0; i < 100000; i++) {
+      assert.isTrue(filteringHelper.settingIsSatisfiedByComponents(setting, components))
+    }
+    console.timeEnd('settingIsSatisfiedByComponents')
+
+    console.time('settingIsSatisfiedByComponents2')
+    for (i = 0; i < 100000; i++) {
+      assert.isTrue(filteringHelper.settingIsSatisfiedByComponents2(setting, components))
+    }
+    console.timeEnd('settingIsSatisfiedByComponents2')
+
+    console.time('settingIsSatisfiedByComponents3')
+    for (i = 0; i < 100000; i++) {
+      assert.isTrue(filteringHelper.settingIsSatisfiedByComponents3(setting, components))
+    }
+    console.timeEnd('settingIsSatisfiedByComponents3')
+  })
+
   it('filter out a setting with requirement that Contains at no element present in the components', function () {
     const setting = {
       'name': 'foo',
